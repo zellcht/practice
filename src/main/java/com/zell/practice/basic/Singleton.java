@@ -1,3 +1,5 @@
+package com.zell.practice.basic;
+
 public class Singleton {
     private static volatile Singleton instance;
     private Singleton(){

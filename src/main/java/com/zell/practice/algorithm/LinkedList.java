@@ -1,3 +1,5 @@
+package com.zell.practice.algorithm;
+
 public class LinkedList {
     public static class ListNode {
         int val;

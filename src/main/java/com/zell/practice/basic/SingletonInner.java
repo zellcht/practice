@@ -1,3 +1,5 @@
+package com.zell.practice.basic;
+
 public class SingletonInner {
     private SingletonInner(){
     }

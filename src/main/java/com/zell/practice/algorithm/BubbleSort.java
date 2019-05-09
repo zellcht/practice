@@ -1,3 +1,5 @@
+package com.zell.practice.algorithm;
+
 import java.util.Arrays;
 
 public class BubbleSort {
