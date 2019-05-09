@@ -3,7 +3,7 @@ package com.zell.practice.algorithm;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-public class BFS {
+public class Tree {
     public static class TreeNode {
         String val;
         TreeNode left;
@@ -59,6 +59,15 @@ public class BFS {
                 stack.push(node.left);
             }
         }
+    }
+
+    public static int maxDepth(TreeNode root){
+        if(root == null){
+            return 0;
+        }
+        int left = maxDepth(root.left) + 1;
+        int right = maxDepth(root.right) + 1;
+        return left > right ? left : right;
     }
 
     public static void main(String[] args) {
