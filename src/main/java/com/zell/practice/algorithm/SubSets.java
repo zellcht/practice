@@ -22,5 +22,7 @@ public class SubSets {
     public static void main(String[] args) {
         int[] nums = {1,2,3,7,8,9};
         System.out.println(subsets(nums));
+        char[] s = {'a','c','i','d'}
+        ;
     }
 }

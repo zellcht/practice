@@ -1,7 +1,6 @@
 package com.zell.practice.algorithm;
 
 import java.util.ArrayDeque;
-import java.util.Queue;
 
 public class Tree {
     public static class TreeNode {
