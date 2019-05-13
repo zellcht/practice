@@ -1,5 +1,7 @@
 package com.zell.practice.algorithm;
 
+import com.zell.practice.algorithm.common.CommonUtils;
+
 import java.util.Arrays;
 
 public class QuickSort {
@@ -15,14 +17,14 @@ public class QuickSort {
                 end--;
             }
             if(start < end){
-                Common.swap(nums, start, end);
+                CommonUtils.swap(nums, start, end);
                 start++;
             }
             while(start < end && nums[start] <= pivot){
                 start++;
             }
             if(start < end){
-                Common.swap(nums, start, end);
+                CommonUtils.swap(nums, start, end);
                 end--;
             }
         }

@@ -1,5 +1,7 @@
 package com.zell.practice.algorithm;
 
+import com.zell.practice.algorithm.common.CommonUtils;
+
 import java.util.Arrays;
 
 public class BubbleSort {
@@ -10,7 +12,7 @@ public class BubbleSort {
         for (int i = 0; i < nums.length; i++) {
             for (int j = 0; j < nums.length - 1 - i; j++) {
                 if(nums[j] >  nums[j + 1]){
-                    Common.swap(nums, j, j + 1);
+                    CommonUtils.swap(nums, j, j + 1);
                 }
             }
         }

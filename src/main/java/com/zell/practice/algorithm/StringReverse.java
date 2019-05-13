@@ -29,7 +29,7 @@ public class StringReverse {
         s[end] = temp;
     }
 
-    public static void main(java.lang.String[] args) {
+    public static void main(String[] args) {
         String str = "Let's take LeetCode contest";
         System.out.println(reverseWords(str));
     }

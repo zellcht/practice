@@ -1,5 +1,7 @@
 package com.zell.practice.algorithm;
 
+import com.zell.practice.algorithm.common.CommonUtils;
+
 import java.util.Arrays;
 
 public class SelectionSort {
@@ -14,7 +16,7 @@ public class SelectionSort {
                     minIndex = j;
                 }
             }
-            Common.swap(nums, minIndex, i);
+            CommonUtils.swap(nums, minIndex, i);
         }
         return nums;
     }

@@ -1,20 +1,11 @@
 package com.zell.practice.algorithm;
 
+import com.zell.practice.algorithm.common.CommonUtils;
+import com.zell.practice.algorithm.common.TreeNode;
+
 import java.util.ArrayDeque;
 
 public class Tree {
-    public static class TreeNode {
-        String val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(String x) { val = x; }
-        TreeNode(String x, TreeNode left, TreeNode right){
-            val = x;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
     public static void preOrder(TreeNode root) {
         if(root == null){
             return;
@@ -70,15 +61,7 @@ public class Tree {
     }
 
     public static void main(String[] args) {
-        TreeNode i = new TreeNode("I");
-        TreeNode h = new TreeNode("H");
-        TreeNode g = new TreeNode("G");
-        TreeNode e = new TreeNode("E");
-        TreeNode f = new TreeNode("F", h, i);
-        TreeNode d = new TreeNode("D", null, g);
-        TreeNode c = new TreeNode("C", f, null);
-        TreeNode b = new TreeNode("B", d, e);
-        TreeNode root = new TreeNode("A", b, c);
+        TreeNode root = CommonUtils.getTree();
         preOrder(root);
         System.out.println("======BFS=======");
         bfs(root);
