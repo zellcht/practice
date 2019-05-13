@@ -1,4 +1,4 @@
-package com.zell.practice.algorithm;
+package com.zell.practice.algorithm.sorts;
 
 import com.zell.practice.algorithm.common.CommonUtils;
 

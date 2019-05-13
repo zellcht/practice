@@ -7,6 +7,13 @@ public class CommonUtils {
         nums[j] = temp;
     }
 
+    public static void printNode(ListNode node){
+        while (node != null){
+            System.out.println(node.val);
+            node = node.next;
+        }
+    }
+
     public static TreeNode getTree(){
         TreeNode i = new TreeNode("I");
         TreeNode h = new TreeNode("H");
@@ -37,4 +44,44 @@ public class CommonUtils {
         d.next = e;
         return a;
     }
+
+    public static ListNode getListNodeWithCycle(){
+        ListNode a = new ListNode(1);
+        ListNode b = new ListNode(2);
+        ListNode c = new ListNode(3);
+        ListNode d = new ListNode(4);
+        ListNode e = new ListNode(5);
+        a.next = b;
+        b.next = c;
+        c.next = d;
+        d.next = e;
+        e.next = c;
+        return a;
+    }
+
+    public static ListNode[] getListNodeList(){
+        ListNode a = new ListNode(1);
+        ListNode b = new ListNode(4);
+        ListNode c = new ListNode(5);
+
+        ListNode d = new ListNode(1);
+        ListNode e = new ListNode(3);
+        ListNode f = new ListNode(4);
+
+        ListNode g = new ListNode(2);
+        ListNode h = new ListNode(6);
+        ListNode i = new ListNode(7);
+        a.next = b;
+        b.next = c;
+
+        d.next = e;
+        e.next = f;
+
+        g.next = h;
+        h.next = i;
+
+        ListNode[] list = {a,d,g};
+        return list;
+    }
+
 }

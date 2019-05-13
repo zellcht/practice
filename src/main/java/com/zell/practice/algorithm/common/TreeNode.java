@@ -1,7 +1,5 @@
 package com.zell.practice.algorithm.common;
 
-import com.zell.practice.algorithm.Tree;
-
 public class TreeNode {
     public String val;
     public TreeNode left;
