@@ -15,15 +15,15 @@ public class CommonUtils {
     }
 
     public static TreeNode getTree(){
-        TreeNode i = new TreeNode("I");
-        TreeNode h = new TreeNode("H");
-        TreeNode g = new TreeNode("G");
-        TreeNode e = new TreeNode("E");
-        TreeNode f = new TreeNode("F", h, i);
-        TreeNode d = new TreeNode("D", null, g);
-        TreeNode c = new TreeNode("C", f, null);
-        TreeNode b = new TreeNode("B", d, e);
-        TreeNode root = new TreeNode("A", b, c);
+        TreeNode i = new TreeNode(10);
+        TreeNode h = new TreeNode(9);
+        TreeNode g = new TreeNode(8);
+        TreeNode e = new TreeNode(5);
+        TreeNode f = new TreeNode(7, h, i);
+        TreeNode d = new TreeNode(4, null, g);
+        TreeNode c = new TreeNode(3, f, null);
+        TreeNode b = new TreeNode(2, d, e);
+        TreeNode root = new TreeNode(1, b, c);
         return root;
     }
 
