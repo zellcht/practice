@@ -4,6 +4,8 @@ import com.zell.practice.algorithm.common.CommonUtils;
 import com.zell.practice.algorithm.common.TreeNode;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Tree {
     public static void preOrder(TreeNode root) {
@@ -60,6 +62,36 @@ public class Tree {
         return left > right ? left : right;
     }
 
+    public static List<List<Integer>> levelOrder(TreeNode root) {
+        if(root == null){
+            return new ArrayList<>();
+        }
+        ArrayDeque<TreeNode> queue = new ArrayDeque<TreeNode>();
+        queue.add(root);
+        List<List<Integer>> list = new ArrayList<>();
+
+        while(!queue.isEmpty()){
+            int size = queue.size();
+            List<Integer> subList = new ArrayList<>();
+            while(size > 0){
+                TreeNode node = queue.remove();
+                subList.add(node.val);
+                if(node.left !=null){
+                    queue.add(node.left);
+
+                }
+                if(node.right !=null){
+                    queue.add(node.right);
+                }
+                size--;
+            }
+            if(!subList.isEmpty()){
+                list.add(subList);
+            }
+        }
+        return list;
+    }
+
     public static void main(String[] args) {
         TreeNode root = CommonUtils.getTree();
         preOrder(root);
@@ -67,5 +99,6 @@ public class Tree {
         bfs(root);
         System.out.println("======DFS=======");
         dfs(root);
+        levelOrder(root);
     }
 }
