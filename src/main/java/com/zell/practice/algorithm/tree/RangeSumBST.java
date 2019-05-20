@@ -1,4 +1,4 @@
-package com.zell.practice.algorithm.Tree;
+package com.zell.practice.algorithm.tree;
 
 import com.zell.practice.algorithm.common.TreeNode;
 
