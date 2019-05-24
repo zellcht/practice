@@ -7,7 +7,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.concurrent.Future;
+import java.util.concurrent.ThreadPoolExecutor;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -31,5 +35,16 @@ public class BasicTests {
 		}
 		Thread.currentThread().join();
 	}
-
+	@Test
+	public void TestTaskWithReturn() throws InterruptedException {
+		for (int i = 0; i < 10; i++) {
+			try {
+				Future<String> future = task.taskWithReturn(i);
+				//System.out.println(future.get());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		Thread.currentThread().join();
+	}
 }
