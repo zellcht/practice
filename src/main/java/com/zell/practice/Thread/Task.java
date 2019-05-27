@@ -1,4 +1,4 @@
-package com.zell.practice.Thread;
+package com.zell.practice.thread;
 
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;

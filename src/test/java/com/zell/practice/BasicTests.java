@@ -1,17 +1,15 @@
 package com.zell.practice;
 
-import com.zell.practice.Thread.Task;
-import com.zell.practice.basic.AbstractAnimal;
-import com.zell.practice.basic.Cat;
+import com.zell.practice.thread.Task;
+import com.zell.practice.local.basic.AbstractAnimal;
+import com.zell.practice.local.basic.Cat;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.concurrent.Future;
-import java.util.concurrent.ThreadPoolExecutor;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
