@@ -3,6 +3,9 @@ package com.zell.practice.algorithm.linkedList;
 import com.zell.practice.algorithm.common.CommonUtils;
 import com.zell.practice.algorithm.common.ListNode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MergeKlists {
     public static ListNode mergeKLists(ListNode[] lists) {
         return partition(lists, 0 ,lists.length - 1);
@@ -35,5 +38,6 @@ public class MergeKlists {
 
     public static void main(String[] args) {
         CommonUtils.printNode( MergeKlists.mergeKLists(CommonUtils.getListNodeList()));
+        List<? extends Number> foo1 = new ArrayList<Integer>();
     }
 }
